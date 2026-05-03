@@ -20,7 +20,7 @@ generando efectos visuales y movimientos inesperados controlados por eventos de 
 ## Objetivo
 Explorar interacciones UI más expresivas y creativas que las interfaces tradicionales.
 
-## 📁 Estructura
+## Estructura
 - index.html
 
 ##
