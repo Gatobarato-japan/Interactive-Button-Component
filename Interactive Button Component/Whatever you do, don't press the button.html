@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do Not Press</title>
+
+<style>
+    body {
+        background: black;
+        color: lime;
+        font-family: monospace;
+        text-align: center;
+        margin-top: 100px;
+        transition: all 0.3s;
+    }
+
+    button {
+        padding: 30px;
+        font-size: 25px;
+        width: 80%;
+        max-width: 300px;
+        background: black;
+        color: lime;
+        border: 2px solid lime;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<h1 id="text">Do not press the button</h1>
+<button onclick="doSomething()">Press</button>
+
+<script>
+function doSomething() {
+    navigator.vibrate(200);
+
+    let random = Math.floor(Math.random() * 8);
+
+    switch(random) {
+        case 0:
+            document.body.style.background = "red";
+            break;
+
+        case 1:
+            document.getElementById("text").innerText = "I warned you.";
+            break;
+
+        case 2:
+            alert("I'm watching you...");
+            break;
+
+        case 3:
+            document.body.style.transform = "rotate(180deg)";
+            break;
+
+        case 4:
+            document.body.style.background = "white";
+            document.body.style.color = "black";
+            break;
+
+        case 5:
+            document.body.innerHTML += "<p>ERROR ERROR ERROR</p>";
+            break;
+
+        case 6:
+            document.body.style.fontSize = "40px";
+            break;
+
+        case 7:
+            window.open("https://www.google.com");
+            break;
+    }
+}
+</script>
+
+</body>
+</html>
